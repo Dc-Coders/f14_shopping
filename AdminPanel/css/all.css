@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(../fonts/FiraSans-Thin.ttf);
+    font-weight: 100;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(../fonts/FiraSans-ExtraLight.ttf);
+    font-weight: 200;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(../fonts/FiraSans-Light.ttf);
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(../fonts/FiraSans-Regular.ttf);
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(../fonts/FiraSans-Medium.ttf);
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(../fonts/FiraSans-SemiBold.ttf);
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(../fonts/FiraSans-Bold.ttf);
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(../fonts/FiraSans-ExtraBold.ttf);
+    font-weight: 800;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(../fonts/FiraSans-Black.ttf);
+    font-weight: 900;
+    font-display: swap;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    flex-direction: column;
+    font-family: 'Fira Sans';
+    color: #fff;
+    background: #000000;
+    background: #000000;
+    background-color: #111111;
+    background-image: linear-gradient(
+      32deg,
+      rgba(8, 8, 8, 0.74) 30px,
+      transparent
+    );
+    background-size: 60px 60px;
+    background-position: -5px -5px;
+}
+/* .container {
+    width: 1300px;
+    margin: 0 auto;
+} */
+.admin_panel {
+    display: flex;
+    align-items: start;
+}
+.admin_bar {
+    width: 320px;
+    padding: 30px 20px;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0 24px 80px #0000008c;
+    background: #1e1e1f;
+    border: 1px solid #383838;
+    padding: 15px;
+    margin-top: 30px;
+}
+.admin_bar_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo_img {
+    border-radius: 50%;
+}
+.logo_text {
+    width: 100px;
+    text-align: end;
+    color: #fafafa;
+}
+.admin_bar_line {
+    display: flex;
+    margin: 30px auto;
+    width: 90%;
+    height: 1px;
+    background: #383838;
+}
+.admin_bar_list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 220px;
+    gap: 30px;
+}
+.admin_bar_list_item {
+    
+}
+
+.admin_bar_list_item_link {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #fafafa;
+    gap: 30px;
+    transition: all ease 0.7s;
+}
+.admin_bar_list_item_link:hover {
+    transform: translateX(30px);
+}
+.link_logo {
+    position: relative;
+    background: linear-gradient(
+        to bottom right, 
+        hsl(0, 0%, 25%) 0%, 
+        hsla(0, 0%, 25%, 0) 50%
+      );
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #ffdb70;
+    box-shadow: -4px 8px 24px #00000040;
+    z-index: 1;
+}
+.admin_bar_logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-size: 20px;
+    color: #fafafa;
+}
