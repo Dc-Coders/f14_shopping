@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: url(./img/adback.png) no-repeat;
+    background-size: 100% 100%;
+    backdrop-filter: blur(10px);
+}
+.hed{
+    display: flex;
+    gap: 6rem;
+}
+.navbar{
+    width: 250px;
+    height: 100vh;
+    border-right: 2px solid rgb(156, 156, 156);
+    box-shadow: 10px 0px 10px rgb(107, 106, 106);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.navbar ul{
+    margin-top: 30px;
+    width: 100%;
+}
+.navbar ul li{
+    width: 100%;
+    height: 50px;
+    padding-left: 35px;
+    display: flex;
+    align-items: center;
+}
+.navbar li:hover{
+    background: rgba(165, 162, 162, 0.514);
+}
+.navbar li a{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.admin{
+    margin-top: 2rem;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.658);
+    box-shadow: 0px 0px 20px white;
+}
+.name{
+    margin-top: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.new{
+    margin-top: 60px;
+    color: white;
+    font-size: 30px;
+}
+.inp input{
+    margin-top: 50px;
+    width: 350px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 15px;
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    color: white;
+    background: transparent;
+    padding: 0 12px;
+    box-shadow: 0px 0px 20px white;
+}
+.inp{
+    position: relative;
+}
+.hed_content{
+    margin-top: 3rem;
+    width: 70%;
+    height: 80vh;
+    border: 2px solid white;
+    box-shadow: 0px 0px 20px white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputs{
+    display: flex;
+    gap: 10rem;
+}
+.inp input:focus{
+    border: 2px solid aqua;
+}
+.inp input::placeholder{
+    color: white;
+    font-weight: 600;
+}
+.sub{
+    margin: 30px 45%;
+    width: 100px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: transparent;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    box-shadow: 0px 0px 20px white;
+}
+.sub:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    box-shadow: 0px 0px 30px white;
+}
+.sub:active{
+    background: rgb(190, 183, 183);
+}
+select{
+    margin-top: 50px;
+    width: 350px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 15px;
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    color: white;
+    background: transparent;
+    padding: 0 12px;
+    box-shadow: 0px 0px 20px white;
+}
