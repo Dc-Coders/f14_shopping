@@ -28,7 +28,7 @@ form.addEventListener("submit", (e) =>{
     
   
   
-    alert("Your product has been addes 😀");
+    alert("Your product has been added 😀");
     e.target.reset();
   }
 
