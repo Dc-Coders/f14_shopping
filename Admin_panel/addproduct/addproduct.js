@@ -16,7 +16,7 @@ form.addEventListener("submit", (e) =>{
     
   
   
-    fetch("https://66c4c4b2b026f3cc6cf09dde.mockapi.io/shopping",{
+    fetch("https://66ab5539636a4840d7ca3261.mockapi.io/dcd/products",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
