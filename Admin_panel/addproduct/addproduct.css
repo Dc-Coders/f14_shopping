@@ -122,10 +122,11 @@ select{
     height: 30px;
     border: 2px solid white;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 50px;
     color: white;
     background: transparent;
     outline: none;
+    font-size: 11px;
     box-shadow: 0px 0px 20px white;
 }
 select option{
