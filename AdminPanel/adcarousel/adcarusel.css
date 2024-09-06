@@ -6,22 +6,27 @@
     list-style: none;
     font-family: sans-serif;
 }
-body{
-    width: 100%;
-    height: 100vh;
-    background: url(./img/adback.png) no-repeat;
-    background-size: 100% 100%;
-    backdrop-filter: blur(11px);
-}
-.hed{
+.container{
     display: flex;
     gap: 6rem;
 }
+
+body{
+    width: 100%;
+    height: auto;
+    background: url(./img/adback.png) no-repeat;
+    background-size: 100% 100%;
+}
+header{
+    gap: 6rem;
+    padding: 0 20px;
+}
 .navbar{
     width: 250px;
-    height: 100vh;
+    height: 119vh;
     border-right: 2px solid rgb(156, 156, 156);
     box-shadow: 10px 0px 10px rgb(107, 106, 106);
+    border-bottom-right-radius: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -90,7 +95,7 @@ body{
 }
 .hed_content{
     margin-top: 3rem;
-    width: 70%;
+    width: 100%;
     height: 700px;
     border: 2px solid white;
     box-shadow: 0px 0px 20px white;
@@ -98,6 +103,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 30px;
 }
 .inputs{
     display: flex;
@@ -148,3 +154,179 @@ select{
     padding: 0 12px;
     box-shadow: 0px 0px 20px white;
 }
+.general_content{
+    width: 70%;
+}.del_panel{
+    margin: 4rem auto;
+    width: 90%;
+    height: 400px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 20px white;
+    border-radius: 20px;
+}
+
+.product_nav{
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid white;
+    box-shadow: 0px 0px 20px white;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.product_nav ul{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.product_nav li{
+    width: 400px;
+}
+.product_nav h3{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.del_inp{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.del_inp{
+    width: 200px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 15px;
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    color: white;
+    background: transparent;
+    padding: 0 12px;
+    box-shadow: 0px 0px 10px white;
+}
+.del_inp input{
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: white;
+}
+.del_inp input::placeholder{
+    color: white;
+    font-weight: 600;
+}
+
+
+
+
+#products_panel{
+    margin: 1rem auto;
+    width: 95%;
+    height: 75%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+#products_panel::-webkit-scrollbar{
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 12px;
+}
+#products_panel::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.601);
+    border-radius: 20px;
+}
+.delete_product{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:  0;
+    color: white;
+}
+.delete_product img{
+    margin-left: 40px;
+    width: 60px;
+    height: 60px;
+}
+.pr_name{
+    margin-left: 50px;
+    width: 150px;
+    height: 45 px;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+.pr_name::-webkit-scrollbar{
+    background: rgba(255, 255, 255, 0.082);
+    border-radius: 12px;
+    width: 190px;
+    height: 10px;
+}
+.pr_name::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.139);
+    border-radius: 20px;
+}
+.pr_price{
+    margin-left: 60px;
+}
+.pr_id{
+    padding-left: 10px;
+}
+#put_btn{
+    width: 70px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: transparent;
+    outline: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    box-shadow: 0px 0px 20px white;
+}
+#put_btn:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    box-shadow: 0px 0px 30px white;
+}
+#put_btn:active{
+    background: rgb(190, 183, 183);
+}
+#delete_btn{
+    margin-right: 30px;
+    width: 100px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: transparent;
+    outline: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    box-shadow: 0px 0px 20px white;
+}
+#delete_btn:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    box-shadow: 0px 0px 30px white;
+}
+#delete_btn:active{
+    background: rgb(190, 183, 183);
+}   

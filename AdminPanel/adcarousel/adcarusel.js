@@ -33,3 +33,41 @@ form.addEventListener("submit", (e) =>{
   }
 
 })
+
+
+
+try {
+  async function delProduct(){
+      await fetch("https://66ab5539636a4840d7ca3261.mockapi.io/dcd/corusel")
+      .then(res => res.json())
+      .then(data => {
+
+
+        
+        
+        
+        data.forEach((item) => {
+          
+            let prodDiv = document.getElementById("products_panel")
+          prodDiv.innerHTML +=`
+              <div class="delete_product">
+              <h3 class="pr_id">${item.id}</h3>
+              <h3 class="pr_name">${item.name}</h3>
+              <img src="${item.img}" alt="">
+              <h3 class="pr_price">$${item.price}</h3>
+              <button id="put_btn">PUT</button>
+              <button id="delete_btn">DELETE</button>
+              </div>
+                 `;
+          })
+      })
+    }
+  delProduct()
+}catch(e){
+  alert("ERROR")
+}
+
+
+
+
+
