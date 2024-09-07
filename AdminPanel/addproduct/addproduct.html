@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="addproduct.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+    
+    <header class="hed">
+        <div class="container">
+            <nav class="navbar">
+                <img class="admin" src="./img/admin_img.png" alt="">
+                <h1 class="name">ADMIN <box-icon name='edit' type='solid' color='#ffffff' ></box-icon></h1>
+                <ul>
+                    <li>
+                        <a href="../adhome/adhome.html"><box-icon name='home' animation='tada' color='#ffffff' ></box-icon> HOME</a>
+                    </li>
+                    <li>
+                        <a href="../addproduct/addproduct.html"><box-icon name='plus' animation='spin' color='#fffdfd' ></box-icon> ADD_PRODUCT</a>
+                    </li>
+                    <li>
+                        <a href="../adcarousel/adcarusel.html"><box-icon name='carousel' animation='tada' color='#ffffff' ></box-icon> COROUSEL</a>
+                    </li>
+                    <li>
+                        <a href="../adsettings/adsettings.html"><box-icon name='cog' animation='spin' color='#ffffff' ></box-icon> SETTINGS</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="general_content">
+                <div class="hed_content">
+                    <h1 class="new">NEW PRODUCT</h1>
+                    <div class="addcar">
+                        <form class="form">
+                            <div class="inputs">
+                                <div class="inpName">
+                                    <div class="inp">
+                                        <input type="url" placeholder="Product Img..." name="img" >
+                                    </div>
+                                    <div class="inp">
+                                        <input type="text" placeholder="Product Name..." name="name" >
+                                    </div>
+                                </div>
+                                <div class="inpPrice">
+                                    <div class="inp">
+                                        <input type="number" placeholder="Product desc" name="desc" >
+                                    </div>
+                                    <div class="inp">
+                                        <input type="number" placeholder="Product Price" name="price" >
+                                    </div>
+                                </div>
+                            </div>
+                            <select name="type" >
+                                <option class="opt" value="electronics" >Electronics</option>
+                                <option class="opt" value="accessory" >Accessory</option>
+                                <option class="opt" value="clothes" >Clothes</option>
+                                <option class="opt" value="housewares" >Housewares</option>
+                            </select>
+                            <input class="sub" type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="del_panel">
+            <div class="product_nav">
+                <ul>
+                    <li>
+                        <h3>ID</h3>
+                    </li>
+                    <li style="margin-right: 100px;">
+                        <h3>NAME</h3>
+                    </li>
+                    <li>
+                        <h3>IMG</h3>
+                    </li>
+                    <li>
+                        <h3>PRICE</h3>
+                    </li>
+                </ul>
+                <form class="del_inp">
+                    <input type="search" placeholder="Product name">
+                    <box-icon name='search-alt' animation='tada' color='#ffffff' ></box-icon>
+                </form>
+            </div>
+
+            <div id="products_panel">
+
+            </div>
+        </div>
+    </header>
+
+    
+
+
+
+
+
+    <script src="addproduct.js"></script>
+</body>
+</html>
