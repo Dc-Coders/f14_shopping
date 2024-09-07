@@ -56,7 +56,7 @@ try {
               <img src="${item.img}" alt="">
               <h3 class="pr_price">$${item.price}</h3>
               <button id="put_btn">PUT</button>
-              <button id="delete_btn">DELETE</button>
+              <button id="delete_btn" onclick="delFunc(${item.id})">DELETE</button
               </div>
                  `;
           })
@@ -71,3 +71,14 @@ try {
 
 
 
+function delFunc(a){
+  fetch(`https://66ab5539636a4840d7ca3261.mockapi.io/dcd/corusel/${a}`,{
+  method: "DELETE",
+  headers: {
+    "Content-Type": "application/json"
+  }
+})
+.then(res => res.json())
+.then(del => console.log(del))
+  }
+  
