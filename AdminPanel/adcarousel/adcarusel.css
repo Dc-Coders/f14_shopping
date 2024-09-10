@@ -23,7 +23,7 @@ header{
 }
 .navbar{
     width: 250px;
-    height: 72vh;
+    height: 750px;
     border-right: 2px solid rgb(156, 156, 156);
     box-shadow: 10px 0px 10px rgb(107, 106, 106);
     border-bottom-right-radius: 20px;
