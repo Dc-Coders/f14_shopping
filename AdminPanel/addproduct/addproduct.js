@@ -57,7 +57,7 @@ try {
               <h3 class="pr_name">${item.name}</h3>
               <img src="${item.img}" alt="">
               <h3 class="pr_price">$${item.price}</h3>
-              <button id="put_btn" onclick="putFunc(${item.name,item.price})">PUT</button>
+              <button id="put_btn" onclick="putFunc(${item.id})">PUT</button>
               <button id="delete_btn" onclick="delFunc(${item.id})">DELETE</button>
               </div>
                  `;
@@ -97,24 +97,54 @@ function delFunc(a){
     }
 
 
-function putFunc(b){
-  let putInp = document.querySelector(".putProd")
-  putInp.classList.toggle("put_div")
 
 
-  let puttavar = document.querySelector(".putProd")
-  puttavar.addEventListener("submit", (d) => {
+    function putFunc(id){
+      console.log(id);
 
 
+      let putProd = document.querySelector(".putProd");
 
-    
-  fetch(`https://66ab5539636a4840d7ca3261.mockapi.io/dcd/products/${d}`,{
-    method:"PUT",
-    headers:{
-      "Content-Type":"application/json"
-    },
-    
-  })
-  .then(res => res.status)
-  })
-}
+      putProd.classList.add("put_active")
+
+      let putForm = document.querySelector(".putProd");
+      putForm.addEventListener("submit", (e) =>{
+        e.preventDefault();
+        let putInp = document.querySelector(".put-input").value
+      
+        if (putInp == ""){
+          alert("Please write information in the input 😅")
+        }else{
+          let putFormData = new FormData(putForm);
+          let putData = Object.fromEntries(putFormData)
+          
+          
+        
+        
+          fetch(`https://66ab5539636a4840d7ca3261.mockapi.io/dcd/products/${id}`,{
+            method:"PUT",
+            headers:{
+              "Content-Type":"application/json"
+            },
+            body: JSON.stringify(putData),
+          })
+          .then(res => res.json())
+          .then(data => console.log(data));
+          
+        
+        
+          alert("Your product has been added 😀");
+          e.target.reset();
+        }
+      
+      })
+
+
+    }
+
+
+document.querySelector(".back_put_form").addEventListener("click",function(){
+  let putProd = document.querySelector(".putProd");
+
+  putProd.classList.remove("put_active")
+})
