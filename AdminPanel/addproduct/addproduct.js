@@ -34,25 +34,35 @@ form.addEventListener("submit", (e) =>{
 
 })
 
+let productSearch = []
+  
+const searchInp = document.querySelector("[data-search]")
 
 
+searchInp.addEventListener("input", f => {
+  const searchProd = f.target.value.toLowerCase()
+  productSearch.foreach(prod => {
+    const isVisible = prod.name.includes(searchProd)
+    deleteProduct.classList.toggle("hide", !isVisible)
+  })
+})
 
 
 try {
   async function delProduct(){
       await fetch("https://66ab5539636a4840d7ca3261.mockapi.io/dcd/products")
       .then(res => res.json())
-      .then(data => {
+      .then(prd => {
 
 
         
+  
         
-        
-        data.forEach((item) => {
+        productSearch = prd.map((item) => {
           
             let prodDiv = document.getElementById("products_panel")
           prodDiv.innerHTML +=`
-              <div class="delete_product">
+              <div class="deleteProduct">
               <h3 class="pr_id">${item.id}</h3>
               <h3 class="pr_name">${item.name}</h3>
               <img src="${item.img}" alt="">
@@ -67,6 +77,7 @@ try {
       })
     
     }
+
     
   delProduct()
 }catch(e){
@@ -108,13 +119,10 @@ function delFunc(a){
       putProd.classList.add("put_active")
 
       let putForm = document.querySelector(".putProd");
-      putForm.addEventListener("submit", (e) =>{
-        e.preventDefault();
+      putForm.addEventListener("submit", (s) =>{
+        s.preventDefault();
         let putInp = document.querySelector(".put-input").value
       
-        if (putInp == ""){
-          alert("Please write information in the input 😅")
-        }else{
           let putFormData = new FormData(putForm);
           let putData = Object.fromEntries(putFormData)
           
@@ -132,10 +140,8 @@ function delFunc(a){
           .then(data => console.log(data));
           
         
-        
-          alert("Your product has been added 😀");
-          e.target.reset();
-        }
+        s.target.reset()
+
       
       })
 

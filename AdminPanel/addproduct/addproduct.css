@@ -191,7 +191,6 @@ select option{
 }
 .product_nav li{
     width: 400px;
-    /* border: 1px solid red; */
 }
 .product_nav h3{
     color: white;
@@ -252,7 +251,7 @@ select option{
     background: rgba(255, 255, 255, 0.601);
     border-radius: 20px;
 }
-.delete_product{
+.deleteProduct{
     margin-top: 20px;
     display: flex;
     align-items: center;
@@ -260,7 +259,7 @@ select option{
     gap:  0;
     color: white;
 }
-.delete_product img{
+.deleteProduct img{
     margin-left: 40px;
     width: 60px;
     height: 60px;
@@ -305,6 +304,7 @@ select option{
     transform: scale(1.1);
     transition: all 0.5s ease;
     box-shadow: 0px 0px 30px white;
+    cursor: pointer;
 }
 #put_btn:active{
     background: rgb(190, 183, 183);
@@ -330,6 +330,7 @@ select option{
     transform: scale(1.1);
     transition: all 0.5s ease;
     box-shadow: 0px 0px 30px white;
+    cursor: pointer;
 }
 #delete_btn:active{
     background: rgb(190, 183, 183);
@@ -397,4 +398,7 @@ select option{
 }
 .subp:active{
     background: rgb(190, 183, 183);
+}
+.hide{
+    display: none;
 }

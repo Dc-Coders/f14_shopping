@@ -55,7 +55,7 @@ try {
               <h3 class="pr_name">${item.name}</h3>
               <img src="${item.img}" alt="">
               <h3 class="pr_price">$${item.price}</h3>
-              <button id="put_btn">PUT</button>
+              <button id="put_btn" onclick="putFunc(${item.id})">PUT</button>
               <button id="delete_btn" onclick="delFunc(${item.id})">DELETE</button
               </div>
                  `;
@@ -72,13 +72,76 @@ try {
 
 
 function delFunc(a){
-  fetch(`https://66ab5539636a4840d7ca3261.mockapi.io/dcd/corusel/${a}`,{
-  method: "DELETE",
-  headers: {
-    "Content-Type": "application/json"
-  }
-})
-.then(res => res.json())
-.then(del => console.log(del))
-  }
+  let dels = confirm("Are you sure you want to delete it ?")
+  if(dels){
+    fetch(`https://66ab5539636a4840d7ca3261.mockapi.io/dcd/corusel/${a}`,{
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(res => res.json())
+    .then(del => console.log(del))
+
+
+    a.target.reset()
+      }else{
+
+      }
+    }
   
+
+
+
+
+
+
+
+
+
+
+  
+  function putFunc(id){
+    console.log(id);
+
+
+    let putProd = document.querySelector(".putProd");
+
+    putProd.classList.toggle("put_active")
+
+    let putForm = document.querySelector(".putProd");
+    putForm.addEventListener("submit", (e) =>{
+      e.preventDefault();
+      let putInp = document.querySelector(".put-input").value
+    
+        let putFormData = new FormData(putForm);
+        let putData = Object.fromEntries(putFormData)
+        
+        
+      
+      
+        fetch(`https://66ab5539636a4840d7ca3261.mockapi.io/dcd/corusel/${id}`,{
+          method:"PUT",
+          headers:{
+            "Content-Type":"application/json"
+          },
+          body: JSON.stringify(putData),
+        })
+        .then(res => res.json())
+        .then(data => console.log(data));
+        
+      
+      
+      
+    
+    })
+
+
+  }
+
+
+document.querySelector(".back_put_form").addEventListener("click",function(){
+let putProd = document.querySelector(".putProd");
+
+putProd.classList.remove("put_active")
+})
