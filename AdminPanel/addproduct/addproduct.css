@@ -267,7 +267,6 @@ select option{
 .pr_name{
     margin-left: 50px;
     width: 150px;
-    height: 45 px;
     overflow: hidden;
     overflow-x: scroll;
 }

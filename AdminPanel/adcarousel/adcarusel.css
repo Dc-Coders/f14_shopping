@@ -261,7 +261,6 @@ select{
 .pr_name{
     margin-left: 50px;
     width: 150px;
-    height: 45 px;
     overflow: hidden;
     overflow-x: scroll;
 }
@@ -393,4 +392,7 @@ select{
 }
 .subp:active{
     background: rgb(190, 183, 183);
+}
+.hide{
+    display: none;
 }
